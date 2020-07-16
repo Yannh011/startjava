@@ -4,10 +4,10 @@ public class Circle {
 			System.out.println(i);
 		}
 		
-		int a = -6;
-		while (a<=6) {
-			System.out.println(a);
-			a = a + 2;
+		int counter = -6;
+		while (counter <= 6) {
+			System.out.println(counter);
+			counter += 2;
 		}
 		
 		int b = 13;
@@ -15,7 +15,7 @@ public class Circle {
 		do {
 			result += b;
 			System.out.println(result);
-			b = b + 2;
+			b += 2;
 		} while (b <= 20);
 	}
 }

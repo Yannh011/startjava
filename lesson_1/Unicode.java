@@ -1,9 +1,8 @@
 public class Unicode {
 	public static void main(String[] args) {
 		char i = 33;
-			while (i <= 126) {
-				System.out.println(i);
-				i++;
-			}
+		while (i <= 126) {
+			System.out.println(i++);
+		}
 	}
 }

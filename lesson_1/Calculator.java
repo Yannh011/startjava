@@ -7,25 +7,23 @@ public class Calculator {
 		int mult = a * b;
 		int div = a / b;
 		int mod = a % b;
-		int square = a * a;
-		int result = 0;
-			if (sum == result) {
-				System.out.println(a + b);
-			}
-			else if (div == result) {
-				System.out.println(a / b);
-			}
-			else if (sub == result) {
-				System.out.println(a - b);
-			}
-			else if (mult == result) {
-				System.out.println(a * b);
-			}
-			else if (mod == result) {
-				System.out.println(a % b);
-			}
-			else if (square == result) {
-				System.out.println(a * a);
-			}
+		int square;
+		int result = 100;
+		if (sub == result) {
+			System.out.println(a - b);
+		} else if (div == result) {
+			System.out.println(a / b);
+		} else if (sum == result) {
+			System.out.println(a + b);
+		} else if (mult == result) {
+			System.out.println(a * b);
+		} else if (mod == result) {
+			System.out.println(a % b);
+		} else if (square == result) {
+			int power = 2;
+			while (power ==2) {
+			a = a * power;
+			System.out.println(a);}
+		}
 	}
 }
