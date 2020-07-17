@@ -1,17 +1,17 @@
 public class MyFirstGame {
 	public static void main(String[] args) {
-		int number = 40;
+		int numberQuiz = 40;
 		int playerNumber = 45;
 		System.out.println("Угадай число от 0 до 100.");
-		while (true) {
-			if (playerNumber == number) {
-			System.out.println("Вы угадали!");
-			} else if (playerNumber > number) {
+		while (playerNumber != numberQuiz) {
+			if (playerNumber > numberQuiz) {
 				System.out.println("Введенное вами число больше того, что загадал компьютер.");
-				playerNumber --;
-			} else if (playerNumber < number) {
+				playerNumber--;
+			} else if (playerNumber < numberQuiz) {
 				System.out.println("Введенное вами число меньше того, что загадал компьютер.");
-				playerNumber ++;}
+				playerNumber++;
+			}
 		}
+		System.out.println("Вы угадали!");
 	}
 }

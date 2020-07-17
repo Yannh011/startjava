@@ -2,26 +2,28 @@ public class Calculator {
 	public static void main(String[] args) {
 		int a = 10;
 		int b = 5;
-		int result = 100;
-		if (a - b == result) {
+		int result = 0;
+		char sign = '~';
+		
+		if (sign == '-') {
 			System.out.println(a - b);
-		} else if (a / b == result) {
+		} else if (sign == '/') {
 			System.out.println(a / b);
-		} else if (a + b == result) {
+		} else if (sign == '+') {
 			System.out.println(a + b);
-		} else if (a * b == result) {
+		} else if (sign == '*') {
 			System.out.println(a * b);
-		} else if (a % b == result) {
+		} else if (sign == '%') {
 			System.out.println(a % b);
-		} else if (a < result) {
+		} else if (sign == '~') {
 			int degree = 1;
-			int power = 1;
-			while (true) {
-			power = power * a;
-			System.out.println(power);
-			degree ++;
-			if (degree > 2)
-			break;}
+			int result = 1;
+			while (degree <= 2) {
+				result = result * a;
+				degree ++;
+				if (degree > 2);
+				}
+			System.out.println(result);
 		}
 	}
 }
