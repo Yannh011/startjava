@@ -20,8 +20,8 @@ public class Calculator {
 			while (degree <= 2) {
 				result *= a;
 				degree++;
-			System.out.println(result);
 			}
+			System.out.println(result);
 		}
 	}
 }
