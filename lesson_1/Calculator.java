@@ -15,11 +15,10 @@ public class Calculator {
 		} else if (sign == '%') {
 			System.out.println(a % b);
 		} else if (sign == '^') {
-			int degree = 1;
 			int result = 1;
-			while (degree <= 2) {
+			while (b <= 9) {
 				result *= a;
-				degree++;
+				b++;
 			}
 			System.out.println(result);
 		}
