@@ -1,16 +1,17 @@
-
+import java.util.Scanner;
 
 public class Calculator {
 
-	private int num1;
-	private int num2;
-	private char sign;
+Scanner scan = new Scanner(System.in);
+	private int num1 = scan.nextInt();
+	private int num2 = scan.nextInt();
+	private char sign = scan.next().charAt(0);
 
 	public int getNum1() {
 		return num1;
 	}
 
-	void setA(int num1) {
+	void setNum1(int num1) {
 		this.num1 = num1;
 	}
 
@@ -18,7 +19,7 @@ public class Calculator {
 		return num2;
 	}
 
-	void setB (int num2) {
+	void setNum2(int num2) {
 		this.num2 = num2;
 	}
 
@@ -30,7 +31,7 @@ public class Calculator {
 		this.sign = sign;
 	}
 
-	public static int calc(int num1, int num2, char sign) {
+	public static int calculate(int num1, int num2, char sign) {
 		int result;
 		switch (sign) {
 			case '+':
@@ -51,11 +52,11 @@ public class Calculator {
 			case '^':
 				int result1 = 1;
 				for (int i = 0; i < num2; i++) {
-				result1 *= num1;
+					result1 *= num1;
 				}
 				System.out.println(result1);
 				break;
 		}
-		return result;
+		return result;// не понимаю как её проинициализировать...
 	}
 }
