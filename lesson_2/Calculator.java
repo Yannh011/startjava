@@ -1,11 +1,8 @@
-import java.util.Scanner;
-
 public class Calculator {
 
-Scanner scan = new Scanner(System.in);
-	private int num1 = scan.nextInt();
-	private int num2 = scan.nextInt();
-	private char sign = scan.next().charAt(0);
+	private int num1;
+	private int num2;
+	private char sign;
 
 	public int getNum1() {
 		return num1;
@@ -31,8 +28,8 @@ Scanner scan = new Scanner(System.in);
 		this.sign = sign;
 	}
 
-	public static int calculate(int num1, int num2, char sign) {
-		int result;
+	public int calculate() {
+		int result = 0;
 		switch (sign) {
 			case '+':
 				result = num1 + num2;
@@ -50,13 +47,12 @@ Scanner scan = new Scanner(System.in);
 				result = num1 % num2;
 				break;
 			case '^':
-				int result1 = 1;
+				result = 1;
 				for (int i = 0; i < num2; i++) {
-					result1 *= num1;
+					result *= num1;
 				}
-				System.out.println(result1);
-				break;
+				return result;
 		}
-		return result;// не понимаю как её проинициализировать...
+		return result;
 	}
 }
