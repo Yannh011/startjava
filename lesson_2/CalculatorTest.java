@@ -8,21 +8,21 @@ public class CalculatorTest {
 		char answer = 'Y';
 		while (answer != 'N') {
 			if (answer == 'Y') {
-			System.out.print("Введите первое число: ");
-			calc.setNum1(scan.nextInt());
-			System.out.print("Введите знак математической операции: ");
-			calc.setSign(scan.next().charAt(0));
-			System.out.print("Введите второе число: ");
-			calc.setNum2(scan.nextInt());
-			System.out.println(calc.calculate());
-			} 
-			System.out.println("Хотите продолжить?[Y/N]:");
-			answer = scan.next().charAt(0);
-			if (answer != 'Y' && answer !='N') {
+				System.out.print("Введите первое число: ");
+				calc.setNum1(scan.nextInt());
+				System.out.print("Введите знак математической операции: ");
+				calc.setSign(scan.next().charAt(0));
+				System.out.print("Введите второе число: ");
+				calc.setNum2(scan.nextInt());
+				System.out.println(calc.calculate());
+				} 
 				System.out.println("Хотите продолжить?[Y/N]:");
-			} else if (answer == 'N') {
-				System.out.println("Спасибо!");
-			}
+				answer = scan.next().charAt(0);
+				if (answer != 'Y' && answer !='N') {
+					System.out.println("Вы ввели неправильный символ");
+					} else if (answer == 'N') {
+					System.out.println("Спасибо!");
+				}
 		}
 	}
 }

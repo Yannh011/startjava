@@ -9,7 +9,7 @@ public class Jaeger {
 		return modelName;
 	}
 
-	void setModelName (String modelName) {
+	void setModelName(String modelName) {
 		this.modelName = modelName;
 	}
 
@@ -17,7 +17,7 @@ public class Jaeger {
 		return height;
 	}
 
-	void setHeight (float height) {
+	void setHeight(float height) {
 		this.height = height;
 	}
 
@@ -25,7 +25,7 @@ public class Jaeger {
 		return weight;
 	}
 
-	void setWeight (float weight) {
+	void setWeight(float weight) {
 		this.weight = weight;
 	}
 
@@ -33,7 +33,7 @@ public class Jaeger {
 		return kaijuKilled;
 	}
 
-	void setKaijuKilled (int kaijuKilled) {
+	void setKaijuKilled(int kaijuKilled) {
 		this.kaijuKilled = kaijuKilled;
 	}
 }
