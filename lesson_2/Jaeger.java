@@ -5,6 +5,13 @@ public class Jaeger {
 	private float weight;
 	private int kaijuKilled;
 
+	public Jaeger (String modelName, float height, float weight, int kaijuKilled) {
+		this.modelName = modelName;
+		this.height = height;
+		this.weight = weight;
+		this.kaijuKilled = kaijuKilled; 
+	}
+
 	public String getModelName() {
 		return modelName;
 	}
