@@ -12,6 +12,10 @@ public class Jaeger {
 		this.kaijuKilled = kaijuKilled; 
 	}
 
+	public String toString() {
+		return this.modelName + " " + this.height + " " + this.weight + " " + this.kaijuKilled;
+	}
+
 	public String getModelName() {
 		return modelName;
 	}
