@@ -15,12 +15,12 @@ public class CalculatorTest {
 				System.out.print("Введите второе число: ");
 				calc.setNum2(scan.nextInt());
 				System.out.println(calc.calculate());
-				} 
-				System.out.println("Хотите продолжить?[Y/N]:");
-				answer = scan.next().charAt(0);
-				if (answer != 'Y' && answer !='N') {
-					System.out.println("Вы ввели неправильный символ");
-					} 
+			} 
+			System.out.println("Хотите продолжить?[Y/N]:");
+			answer = scan.next().charAt(0);
+			if (answer != 'Y' && answer !='N') {
+				System.out.println("Вы ввели неправильный символ");
+			} 
 		}
 		System.out.println("Конец игры");
 	}
