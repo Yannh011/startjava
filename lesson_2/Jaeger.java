@@ -5,15 +5,11 @@ public class Jaeger {
 	private float weight;
 	private int kaijuKilled;
 
-	public Jaeger (String modelName, float height, float weight, int kaijuKilled) {
+	public Jaeger(String modelName, float height, float weight, int kaijuKilled) {
 		this.modelName = modelName;
 		this.height = height;
 		this.weight = weight;
 		this.kaijuKilled = kaijuKilled; 
-	}
-
-	public String toString() {
-		return this.modelName + " " + this.height + " " + this.weight + " " + this.kaijuKilled;
 	}
 
 	public String getModelName() {
@@ -46,5 +42,9 @@ public class Jaeger {
 
 	void setKaijuKilled(int kaijuKilled) {
 		this.kaijuKilled = kaijuKilled;
+	}
+
+		public String toString() {
+		return this.modelName + " " + this.height + " " + this.weight + " " + this.kaijuKilled;
 	}
 }

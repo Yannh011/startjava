@@ -20,9 +20,8 @@ public class CalculatorTest {
 				answer = scan.next().charAt(0);
 				if (answer != 'Y' && answer !='N') {
 					System.out.println("Вы ввели неправильный символ");
-					} else if (answer == 'N') {
-					System.out.println("Спасибо!");
-				}
+					} 
 		}
+		System.out.println("Конец игры");
 	}
 }
