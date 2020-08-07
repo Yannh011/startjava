@@ -12,7 +12,7 @@ public class GuessNumber {
 	}
 
 	public void startGame() {
-		int numberQuiz = (int) ( Math.random() * 100);
+		int numberQuiz = (int) (Math.random() * 101);
 		do { 
 			player1.setNumber(scan.nextInt());
 			if (player1.getNumber() < numberQuiz) {
@@ -21,20 +21,18 @@ public class GuessNumber {
 				System.out.println("Загаданное число меньше");
 			} else if (player1.getNumber() == numberQuiz) {
 				System.out.println("Victory" + player1.getName());
+				break;
 			}
-			break;
 
-			player2.setNumber(scan.nextInt());           // ЗДЕСЬ ВЫДАЕТ ОШИБКУ.
+			player2.setNumber(scan.nextInt());
 			if (player2.getNumber() < numberQuiz) {
 				System.out.println("Загаданное число больше");
 			} else if (player2.getNumber() > numberQuiz) {
 				System.out.println("Загаданное число меньше");
 			} else if (player2.getNumber() == numberQuiz) {
 				System.out.println("Victory" + player2.getName());
+				break;
 			}
-			break; 
 		} while (true);
 	}
-
-
 }

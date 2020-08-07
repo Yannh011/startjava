@@ -6,7 +6,7 @@ public class Player {
 		return name;
 	}
 
-	void setName(String name) {
+	public Player(String name) {
 		this.name = name;
 	}
 
