@@ -7,12 +7,12 @@ public class GuessNumberTest {
 		char answer = 'Y';
 		while (answer != 'N') {
 			if (answer == 'Y') {
-			System.out.println("Представьте первого игрока");
-			Player player1 = new Player(scan.next());
-			System.out.println("Представьте второго игрока");
-			Player player2 = new Player(scan.next());
-			GuessNumber game = new GuessNumber(player1, player2);
-			game.startGame();
+				System.out.println("Представьте первого игрока");
+				Player player1 = new Player(scan.next());
+				System.out.println("Представьте второго игрока");
+				Player player2 = new Player(scan.next());
+				GuessNumber game = new GuessNumber(player1, player2);
+				game.startGame();
 			}
 			System.out.println("Хотите продолжить?[Y/N]:");
 			answer = scan.next().charAt(0);
