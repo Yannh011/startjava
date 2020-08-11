@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.circle;
+
 public class Circle {
 	public static void main(String[] args) {
 		for (int i = 0; i < 21; i++) {
