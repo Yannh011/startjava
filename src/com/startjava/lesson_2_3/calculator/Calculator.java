@@ -34,25 +34,22 @@ public class Calculator {
 		int result = 0;
 		switch (sign) {
 			case '+':
-				result = num1 + num2;
+				result = Math.addExact(num1, num2);
 				break;
 			case '/':
-				result = num1 / num2;
+				result = Math.floorDiv(num1, num2);
 				break;
 			case '-':
-				result = num1 - num2;
+				result = Math.subtractExact(num1, num2);
 				break;
 			case '*':
-				result = num1 * num2;
+				result = Math.multiplyExact(num1, num2);
 				break;
 			case '%':
 				result = num1 % num2;
 				break;
 			case '^':
-				result = 1;
-				for (int i = 0; i < num2; i++) {
-					result *= num1;
-				}
+				result = (int) Math.pow(num1, num2);
 		}
 		return result;
 	}

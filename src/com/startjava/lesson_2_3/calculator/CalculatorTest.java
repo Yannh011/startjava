@@ -10,13 +10,12 @@ public class CalculatorTest {
 		char answer = 'Y';
 		while (answer != 'N') {
 			if (answer == 'Y') {
-				System.out.print("Введите первое число: ");
-				calc.setNum1(scan.nextInt());
-				System.out.print("Введите знак математической операции: ");
-				calc.setSign(scan.next().charAt(0));
-				System.out.print("Введите второе число: ");
-				calc.setNum2(scan.nextInt());
-				System.out.println(calc.calculate());
+				System.out.print("Введите математическое выражение: ");
+				String [] expression = scan.next().split("");
+				calc.setNum1(Integer.parseInt(expression[0]));
+				calc.setSign(expression[1].charAt(0));
+				calc.setNum2(Integer.parseInt(expression[2]));
+				System.out.println (calc.calculate());
 			} 
 			System.out.println("Хотите продолжить?[Y/N]:");
 			answer = scan.next().charAt(0);
