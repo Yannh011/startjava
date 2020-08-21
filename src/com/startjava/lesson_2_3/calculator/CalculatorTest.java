@@ -10,7 +10,7 @@ public class CalculatorTest {
 		char answer = 'Y';
 		while (answer != 'N') {
 			if (answer == 'Y') {
-				System.out.print("Введите математическое выражение: ");
+				System.out.print("Введите математическое выражение:");
 				String [] expression = scan.next().split("");
 				calc.setNum1(Integer.parseInt(expression[0]));
 				calc.setSign(expression[1].charAt(0));
