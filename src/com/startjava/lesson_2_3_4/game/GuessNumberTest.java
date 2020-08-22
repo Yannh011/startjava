@@ -1,22 +1,22 @@
-package com.startjava.lesson_2_3.calculator;
+package com.startjava.lesson_2_3_4.game;
 
 import java.util.Scanner;
 
-public class CalculatorTest {
+public class GuessNumberTest {
 
 	public static void main(String[] args) {
-		Calculator calc = new Calculator();
 		Scanner scan = new Scanner(System.in);
 		char answer = 'Y';
 		while (answer != 'N') {
 			if (answer == 'Y') {
-				System.out.print("Введите математическое выражение:");
-				String [] expression = scan.next().split("");
-				calc.setNum1(Integer.parseInt(expression[0]));
-				calc.setSign(expression[1].charAt(0));
-				calc.setNum2(Integer.parseInt(expression[2]));
-				System.out.println (calc.calculate());
-			} 
+				System.out.println("Представьте первого игрока");
+				Player player1 = new Player(scan.next());
+				System.out.println("Представьте второго игрока");
+				Player player2 = new Player(scan.next());
+				GuessNumber game = new GuessNumber(player1, player2);
+				System.out.println("Начнем игру!");
+				game.startGame();
+			}
 			System.out.println("Хотите продолжить?[Y/N]:");
 			answer = scan.next().charAt(0);
 			if (answer != 'Y' && answer !='N') {
