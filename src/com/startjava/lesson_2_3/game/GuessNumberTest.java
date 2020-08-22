@@ -14,6 +14,7 @@ public class GuessNumberTest {
 				System.out.println("Представьте второго игрока");
 				Player player2 = new Player(scan.next());
 				GuessNumber game = new GuessNumber(player1, player2);
+				System.out.println("Начнем игру!");
 				game.startGame();
 			}
 			System.out.println("Хотите продолжить?[Y/N]:");
