@@ -19,7 +19,7 @@ public class GuessNumber {
 		player2.setAttempt(0);
 		int numberQuiz = (int) (Math.random() * 101);
 		do { 
-			player1.getNumbers()[player1.getAttempt()] = scan.nextInt();
+			player1.setNumbers(scan.nextInt());
 			System.out.println("Я думаю это число: " + player1.getNumbers()[player1.getAttempt()]);
 			player1.setAttempt(player1.getAttempt() + 1);
 			if (player1.getNumbers()[player1.getAttempt()-1] < numberQuiz) {
@@ -61,9 +61,9 @@ public class GuessNumber {
 
 	private void showNumbers(Player player) {
 		System.out.print("Введенные игроком " + player.getName() + " числа:");
-		int[] copyNumbers = Arrays.copyOf(player.getNumbers(), player.getAttempt());
-		for (int copyNumber : copyNumbers) {
-			System.out.print(copyNumber + " ");
+		int[] numbers = Arrays.copyOf(player.getNumbers(), player.getAttempt());
+		for (int number : numbers) {
+			System.out.print(number + " ");
 		}
 	}
 }
