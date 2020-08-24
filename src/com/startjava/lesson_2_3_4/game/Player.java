@@ -16,12 +16,11 @@ public class Player {
 	}
 
 	public int[] getNumbers() {
-		return Arrays.copyOf(numbers, attempt);
+		return Arrays.copyOf(numbers, attempt+1);
 	}
 
 	public void setNumbers(int numbers) {
 		this.numbers[attempt] = numbers;
-		//System.out.println(Arrays.toString(numbers[attempt]));
 	}
 
 	public int getAttempt() {
