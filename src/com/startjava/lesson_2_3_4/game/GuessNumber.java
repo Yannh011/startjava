@@ -16,8 +16,10 @@ public class GuessNumber {
 	}
 
 	public void start() {
-		player1.setAttempt(0);
-		player2.setAttempt(0);
+		//player1.setAttempt(0);
+		//player2.setAttempt(0);
+		//player1.getAttempt();
+		//player2.getAttempt();
 		numberQuiz = (int) (Math.random() * 101);
 		do {
 			inputNumber(player1);
@@ -48,15 +50,15 @@ public class GuessNumber {
 	private void inputNumber(Player player) {
 		player.setNumber(scan.nextInt());
 		System.out.println("Я думаю это число: " + player.getNumbers()[player.getAttempt()]);
-		player.setAttempt(player.getAttempt() + 1);
+		player.getAttempt();
 	}
 
 	private boolean compareNumber(Player player) {
-		if (player.getNumbers()[player.getAttempt() - 1] == numberQuiz) {
+		if (player.getLastNumber() == numberQuiz) {
 			System.out.println("Игрок " + player.getName() + " угадал число " + numberQuiz + " с " + player.getAttempt());
 			return true;
 		} else {
-			String compareNumber = player.getNumbers()[player.getAttempt() - 1] < numberQuiz ? "больше"  : "меньше";
+			String compareNumber = player.getLastNumber() < numberQuiz ? "меньше" : "больше";
 			System.out.println("Загаданное число " + compareNumber);
 			return false;
 		}

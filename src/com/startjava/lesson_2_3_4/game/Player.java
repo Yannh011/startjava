@@ -24,10 +24,14 @@ public class Player {
 	}
 
 	public int getAttempt() {
-		return attempt;
+		return attempt++;
 	}
 
-	public void setAttempt(int attempt) {
-		this.attempt = attempt++;
+	public int getLastNumber() {
+		return numbers[attempt -1];
 	}
+
+	//public void setAttempt(int attempt) {
+	//	this.attempt = attempt++;
+	//}
 }
