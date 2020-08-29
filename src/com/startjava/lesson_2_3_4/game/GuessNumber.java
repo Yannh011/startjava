@@ -37,7 +37,7 @@ public class GuessNumber {
 			System.out.println("Игрок " + player.getName() + " угадал число " + numberQuiz + " с " + player.getAttempt());
 			return true;
 		} else {
-			String compareNumber = player.getLastNumber() < numberQuiz ? "меньше" : "больше";
+			String compareNumber = player.getLastNumber() < numberQuiz ? "больше" : "меньше";
 			System.out.println("Загаданное число " + compareNumber);
 			return false;
 		}
