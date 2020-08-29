@@ -18,29 +18,9 @@ public class GuessNumber {
 	public void start() {
 		//player1.setAttempt(0);
 		//player2.setAttempt(0);
-		//player1.getAttempt();
-		//player2.getAttempt();
 		numberQuiz = (int) (Math.random() * 101);
-		do {
-			inputNumber(player1);
-			if (compareNumber(player1)) {
-				break;
-			}
-			inputNumber(player2);
-			if (compareNumber(player2)) {
-				break;
-			}
-
-			if (player1.getAttempt() > 9) {
-				System.out.print("Закончились попытки");
-				break;
-			}
-
-			if (player2.getAttempt() > 9) {
-				System.out.print("Закончились попытки");
-				break;
-			}
-		} while (true);
+		makeMove(player1);
+		makeMove(player2);
 		showNumbers(player1);
 		showNumbers(player2);
 		Arrays.fill(player1.getNumbers(), 0, player1.getAttempt(), 0);
@@ -49,8 +29,7 @@ public class GuessNumber {
 
 	private void inputNumber(Player player) {
 		player.setNumber(scan.nextInt());
-		System.out.println("Я думаю это число: " + player.getNumbers()[player.getAttempt()]);
-		player.getAttempt();
+		System.out.println("Я думаю это число: " + player.getLastNumber());
 	}
 
 	private boolean compareNumber(Player player) {
@@ -63,6 +42,21 @@ public class GuessNumber {
 			return false;
 		}
 	}
+
+	private void makeMove(Player player) {
+		do {
+				inputNumber(player);
+				if (compareNumber(player)) {
+					break;
+				}
+
+				if (player.getAttempt() > 9) {
+					System.out.print("Закончились попытки");
+					break;
+				}
+			}
+			while (true) ;
+		}
 
 	private void showNumbers(Player player) {
 		System.out.print("Введенные игроком " + player.getName() + " числа:");

@@ -20,7 +20,7 @@ public class Player {
 	}
 
 	public void setNumber(int number) {
-		this.numbers[attempt] = number;
+		numbers[attempt] = number;
 	}
 
 	public int getAttempt() {
@@ -28,7 +28,7 @@ public class Player {
 	}
 
 	public int getLastNumber() {
-		return numbers[attempt -1];
+		return numbers[attempt];
 	}
 
 	//public void setAttempt(int attempt) {
