@@ -17,28 +17,31 @@ public class GuessNumber {
 
 	public void start() {
 		numberQuiz = (int) (Math.random() * 101);
-		makeMove(player1);
-		makeMove(player2);
+		do {
+			if (makeMove(player1)) {
+				break;
+			}
+			if (makeMove(player2)) {
+				break;
+			}
+		} while (true);
+
 		showNumbers(player1);
 		showNumbers(player2);
 		Arrays.fill(player1.getNumbers(), 0, player1.getAttempt(), 0);
 		Arrays.fill(player2.getNumbers(), 0, player2.getAttempt(), 0);
 	}
 
-	private void makeMove(Player player) {
-		do {
-				inputNumber(player);
-				if (compareNumber(player)) {
-					break;
-				}
-
-				if (player.getAttempt() > 9) {
-					System.out.print("Закончились попытки");
-					break;
-				}
+	private boolean makeMove(Player player) {
+			inputNumber(player);
+			if (compareNumber(player)) {
+				return true;
+			} else if (player.getAttempt() > 9) {
+				System.out.print("Закончились попытки");
+				return true;
 			}
-			while (true) ;
-		}
+		return false;
+	}
 
 	private void inputNumber(Player player) {
 		player.setNumber(scan.nextInt());
