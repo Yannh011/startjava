@@ -16,8 +16,6 @@ public class GuessNumber {
 	}
 
 	public void start() {
-		//player1.setAttempt(0);
-		//player2.setAttempt(0);
 		numberQuiz = (int) (Math.random() * 101);
 		makeMove(player1);
 		makeMove(player2);
@@ -25,22 +23,6 @@ public class GuessNumber {
 		showNumbers(player2);
 		Arrays.fill(player1.getNumbers(), 0, player1.getAttempt(), 0);
 		Arrays.fill(player2.getNumbers(), 0, player2.getAttempt(), 0);
-	}
-
-	private void inputNumber(Player player) {
-		player.setNumber(scan.nextInt());
-		System.out.println("Я думаю это число: " + player.getLastNumber());
-	}
-
-	private boolean compareNumber(Player player) {
-		if (player.getLastNumber() == numberQuiz) {
-			System.out.println("Игрок " + player.getName() + " угадал число " + numberQuiz + " с " + player.getAttempt());
-			return true;
-		} else {
-			String compareNumber = player.getLastNumber() < numberQuiz ? "больше" : "меньше";
-			System.out.println("Загаданное число " + compareNumber);
-			return false;
-		}
 	}
 
 	private void makeMove(Player player) {
@@ -57,6 +39,22 @@ public class GuessNumber {
 			}
 			while (true) ;
 		}
+
+	private void inputNumber(Player player) {
+		player.setNumber(scan.nextInt());
+		System.out.println("Я думаю это число: " + player.getLastNumber());
+	}
+
+	private boolean compareNumber(Player player) {
+		if (player.getLastNumber() == numberQuiz) {
+			System.out.println("Игрок " + player.getName() + " угадал число " + numberQuiz + " с " + player.getAttempt());
+			return true;
+		} else {
+			String compareNumber = player.getLastNumber() < numberQuiz ? "больше" : "меньше";
+			System.out.println("Загаданное число " + compareNumber);
+			return false;
+		}
+	}
 
 	private void showNumbers(Player player) {
 		System.out.print("Введенные игроком " + player.getName() + " числа:");

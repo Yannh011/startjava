@@ -20,18 +20,15 @@ public class Player {
 	}
 
 	public void setNumber(int number) {
+		attempt++;
 		numbers[attempt] = number;
-	}
-
-	public int getAttempt() {
-		return attempt++;
 	}
 
 	public int getLastNumber() {
 		return numbers[attempt];
 	}
 
-	//public void setAttempt(int attempt) {
-	//	this.attempt = attempt++;
-	//}
+	public int getAttempt() {
+		return attempt;
+	}
 }
