@@ -41,6 +41,7 @@ public class GuessNumber {
 	}
 
 	private void inputNumber(Player player) {
+		System.out.println(player.getName() + " назовите число.");
 		player.setNumber(scan.nextInt());
 		System.out.println("Я думаю это число: " + player.getLastNumber());
 	}
