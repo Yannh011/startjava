@@ -25,7 +25,6 @@ public class GuessNumber {
 				break;
 			}
 		} while (true);
-
 		showNumbers(player1);
 		showNumbers(player2);
 		Arrays.fill(player1.getNumbers(), 0, player1.getAttempt(), 0);
@@ -38,7 +37,6 @@ public class GuessNumber {
 				return true;
 			} else if (player.getAttempt() > 9) {
 				System.out.print("Закончились попытки");
-				return true;
 			}
 		return false;
 	}
@@ -61,8 +59,9 @@ public class GuessNumber {
 
 	private void showNumbers(Player player) {
 		System.out.print("Введенные игроком " + player.getName() + " числа:");
-		for (int number : player.getNumbers()) {
-			System.out.print(number + " ");
+		int[] copyNumbers = Arrays.copyOf(player.getNumbers(), player.getAttempt());
+		for (int i = 0; i < copyNumbers.length; i++) {
+			System.out.print(copyNumbers[i] + " ");
 		}
 	}
 }
