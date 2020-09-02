@@ -24,7 +24,7 @@ public class GuessNumber {
 			if (makeMove(player2)) {
 				break;
 			}
-		} while (true);
+		} while (player1.getAttempt() <= 9 || player2.getAttempt() <= 9);
 		showNumbers(player1);
 		showNumbers(player2);
 		Arrays.fill(player1.getNumbers(), 0, player1.getAttempt(), 0);

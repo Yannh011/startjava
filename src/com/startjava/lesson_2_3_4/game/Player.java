@@ -20,12 +20,12 @@ public class Player {
 	}
 
 	public void setNumber(int number) {
-		attempt++;
 		numbers[attempt] = number;
+		attempt++;
 	}
 
 	public int getLastNumber() {
-		return numbers[attempt];
+		return numbers[attempt-1];
 	}
 
 	public int getAttempt() {
