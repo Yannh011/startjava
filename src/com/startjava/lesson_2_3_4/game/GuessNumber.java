@@ -32,13 +32,12 @@ public class GuessNumber {
 	}
 
 	private boolean makeMove(Player player) {
-			inputNumber(player);
-			if (compareNumber(player)) {
-				return true;
-			} else if (player.getAttempt() > 9) {
-				System.out.print("Закончились попытки");
-			}
+		if (player.getAttempt() > 9) {
+			System.out.print("Закончились попытки");
 		return false;
+		}
+		inputNumber(player);
+		return compareNumber(player);
 	}
 
 	private void inputNumber(Player player) {
