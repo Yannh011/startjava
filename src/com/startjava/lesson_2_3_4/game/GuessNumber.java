@@ -1,6 +1,5 @@
 package com.startjava.lesson_2_3_4.game;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class GuessNumber {
@@ -17,23 +16,23 @@ public class GuessNumber {
 
 	public void start() {
 		numberQuiz = (int) (Math.random() * 101);
-		do {
+		for (int i = 0; i <= 10; i++) {
 			if (makeMove(player1)) {
 				break;
 			}
 			if (makeMove(player2)) {
 				break;
 			}
-		} while (player1.getAttempt() <= 9 || player2.getAttempt() <= 9);
+		}
 		showNumbers(player1);
 		showNumbers(player2);
-		Arrays.fill(player1.getNumbers(), 0, player1.getAttempt(), 0);
-		Arrays.fill(player2.getNumbers(), 0, player2.getAttempt(), 0);
+		player1.fillNumbers();
+		player2.fillNumbers();
 	}
 
 	private boolean makeMove(Player player) {
 		if (player.getAttempt() > 9) {
-			System.out.print("Закончились попытки");
+			System.out.println("Закончились попытки " + player.getName());
 		return false;
 		}
 		inputNumber(player);
@@ -50,18 +49,16 @@ public class GuessNumber {
 		if (player.getLastNumber() == numberQuiz) {
 			System.out.println("Игрок " + player.getName() + " угадал число " + numberQuiz + " с " + player.getAttempt());
 			return true;
-		} else {
+		}
 			String compareNumber = player.getLastNumber() < numberQuiz ? "больше" : "меньше";
 			System.out.println("Загаданное число " + compareNumber);
 			return false;
-		}
 	}
 
 	private void showNumbers(Player player) {
-		System.out.print("Введенные игроком " + player.getName() + " числа:");
-		int[] copyNumbers = Arrays.copyOf(player.getNumbers(), player.getAttempt());
-		for (int i = 0; i < copyNumbers.length; i++) {
-			System.out.print(copyNumbers[i] + " ");
+		System.out.print(player.getName() + " ");
+		for (int number : player.getNumbers()) {
+			System.out.print(number + " ");
 		}
 	}
 }

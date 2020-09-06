@@ -16,7 +16,7 @@ public class Player {
 	}
 
 	public int[] getNumbers() {
-		return numbers;
+		return Arrays.copyOf(numbers, attempt);
 	}
 
 	public void setNumber(int number) {
@@ -25,10 +25,14 @@ public class Player {
 	}
 
 	public int getLastNumber() {
-		return numbers[attempt-1];
+		return numbers[attempt - 1];
 	}
 
 	public int getAttempt() {
 		return attempt;
+	}
+
+	public void fillNumbers() {
+		Arrays.fill(numbers, 0, attempt, 0);
 	}
 }
