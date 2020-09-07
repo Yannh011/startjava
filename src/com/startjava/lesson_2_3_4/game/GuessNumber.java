@@ -33,7 +33,7 @@ public class GuessNumber {
 	private boolean makeMove(Player player) {
 		if (player.getAttempt() > 9) {
 			System.out.println("Закончились попытки " + player.getName());
-		return false;
+			return false;
 		}
 		inputNumber(player);
 		return compareNumber(player);
@@ -50,9 +50,9 @@ public class GuessNumber {
 			System.out.println("Игрок " + player.getName() + " угадал число " + numberQuiz + " с " + player.getAttempt());
 			return true;
 		}
-			String compareNumber = player.getLastNumber() < numberQuiz ? "больше" : "меньше";
-			System.out.println("Загаданное число " + compareNumber);
-			return false;
+		//String compareNumber = player.getLastNumber() < numberQuiz ? "больше" : "меньше";
+		System.out.println("Загаданное число " + player.getLastNumber() < numberQuiz ? "больше" : "меньше";)
+		return false;
 	}
 
 	private void showNumbers(Player player) {
