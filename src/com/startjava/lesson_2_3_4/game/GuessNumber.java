@@ -51,7 +51,7 @@ public class GuessNumber {
 			return true;
 		}
 		//String compareNumber = player.getLastNumber() < numberQuiz ? "больше" : "меньше";
-		System.out.println("Загаданное число " + player.getLastNumber() < numberQuiz ? "больше" : "меньше");
+		System.out.println("Загаданное число " + (player.getLastNumber() < numberQuiz) ? "больше" : "меньше");
 		return false;
 	}
 
